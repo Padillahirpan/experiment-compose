@@ -27,25 +27,65 @@ import androidx.core.view.WindowCompat
 //)
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    surfaceVariant = PurpleGrey80,
-//    tertiary = Pink80
+    primary = Color(0xFF68DCA5),
+    onPrimary = Color(0xFF003824),
+    primaryContainer = Color(0xFF005235),
+    onPrimaryContainer = Color(0xFF85F9C0),
+
+    secondary = Color(0xFFB4CCBC),
+    onSecondary = Color(0xFF203529),
+    secondaryContainer = Color(0xFF364B3F),
+    onSecondaryContainer = Color(0xFFD0E8D8),
+
+    tertiary = Color(0xFFA4CDDD),
+    onTertiary = Color(0xFF063542),
+    tertiaryContainer = Color(0xFF234C5A),
+    onTertiaryContainer = Color(0xFFC0E9FA),
+
+    error = Color(0xFFFFB4AB),
+    onError = Color(0xFF690005),
+    errorContainer = Color(0xFF93000A),
+    onErrorContainer = Color(0xFFFFDAD6),
+
+    background = Color(0xFF191C1A),
+    onBackground = Color(0xFFE1E3DF),
+    surface = Color(0xFF191C1A),
+    onSurface = Color(0xFFE1E3DF),
+
+    outline = Color(0xFF8A938C),
+    surfaceVariant = Color(0xFF404943),
+    onSurfaceVariant = Color(0xFFC0C9C1),
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    surfaceVariant = PurpleGrey40,
-//    tertiary = Pink40
+    primary = Color(0xFF006C48),
+    onPrimary = Color(0xFFFFFFFF),
+    primaryContainer = Color(0xFF85F9C0),
+    onPrimaryContainer = Color(0xFF002113),
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    secondary = Color(0xFF4D6356),
+    onSecondary = Color(0xFFFFFFFF),
+    secondaryContainer = Color(0xFFD0E8D8),
+    onSecondaryContainer = Color(0xFF0A1F15),
+
+    tertiary = Color(0xFF3C6472),
+    onTertiary = Color(0xFFFFFFFF),
+    tertiaryContainer = Color(0xFFC0E9FA),
+    onTertiaryContainer = Color(0xFF001F28),
+
+    error = Color(0xFFBA1A1A),
+    onError = Color(0xFFFFFFFF),
+    errorContainer = Color(0xFFFFDAD6),
+    onErrorContainer = Color(0xFF410002),
+
+    background = Color(0xFFFBFDF8),
+    onBackground = Color(0xFF191C1A),
+    surface = Color(0xFFFBFDF8),
+    onSurface = Color(0xFF191C1A),
+
+    outline = Color(0xFF707973),
+    surfaceVariant = Color(0xFFDCE5DD),
+    onSurfaceVariant = Color(0xFF404943),
 )
 
 @Composable
@@ -69,7 +109,6 @@ fun HelloReminderTheme(
         SideEffect {
             val window = (view.context as Activity).window
             window.statusBarColor = colorScheme.background.toArgb()
-//            window.statusBarColor = Color.Black.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
         }
     }
